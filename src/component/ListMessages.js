@@ -7,7 +7,7 @@ import {Card, CardMedia, CardTitle} from 'material-ui/Card';
 const CardExampleWithAvatar = ({data}) => {
   return (  <Card>
     <CardMedia overlay={<CardTitle title={data.message.from.username} subtitle={data.message.from.first_name} />} >
-      <img src={'https://api.telegram.org/file/bot173322972:AAEOo2XWSglN11-SvXyCu9Wh6R9exxZlQkU/'+data.photoImg.file_path.toString()} />
+      <img src={'https://api.telegram.org/file/bot173322972:AAEOo2XWSglN11-SvXyCu9Wh6R9exxZlQkU/'+data.photoImg.file_path.toString()} alt="img"/>
     </CardMedia>
   </Card>)
 }
@@ -17,7 +17,7 @@ const StickerMsg = ({data}) => {
 
   return (  <Card>
     <CardMedia overlay={<CardTitle title={data.message.from.username} subtitle={data.message.from.first_name} />} >
-      <img src={'https://api.telegram.org/file/bot173322972:AAEOo2XWSglN11-SvXyCu9Wh6R9exxZlQkU/'+data.sticker.file_path.toString()} />
+      <img src={'https://api.telegram.org/file/bot173322972:AAEOo2XWSglN11-SvXyCu9Wh6R9exxZlQkU/'+data.sticker.file_path.toString()} alt="img"/>
     </CardMedia>
   </Card>)
 }
