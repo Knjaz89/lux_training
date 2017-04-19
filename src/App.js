@@ -3,18 +3,15 @@ import './App.css';
 import ListMessages from './component/ListMessages'
 
 import { connect } from 'react-redux'
-import { getUpdates, repeatRequests, getFoto } from './Actions/TelegramActions'
+import { repeatRequests, } from './Actions/TelegramActions'
 
 
 class App extends Component {
 
 
 shouldComponentUpdate(nextProps, nextState) {
-  console.log(JSON.stringify(this.props.messages) === JSON.stringify(nextProps.messages))
-  // if (this.props.messages.length === nextProps.messages.length) {
-  //   return false
-  // }
-  return !(this.props.messages.length === nextProps.messages.length)
+    console.log(nextProps)
+  return true
 }
 
 

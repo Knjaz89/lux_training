@@ -27,7 +27,7 @@ const TelegramMessages = (state = {
             const newMessages = state.messages.map(item => {
                 if (item.message.photo && !item.photoImg) {
                     const id = item.message.photo[2].file_id
-                    if (id == file.file_id) {
+                    if (id === file.file_id) {
                         let newItem = item
                         newItem.photoImg = file
                         return newItem
@@ -45,7 +45,7 @@ const TelegramMessages = (state = {
             const newMessagesStickers = state.messages.map(item => {
                 if (item.message.sticker && !item.photoImg) {
                     const id = item.message.sticker.file_id
-                    if (id == sticker.file_id) {
+                    if (id === sticker.file_id) {
                         let newItem = item
                         newItem.sticker = sticker
                         return newItem

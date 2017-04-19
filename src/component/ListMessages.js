@@ -2,14 +2,12 @@ import React, { Component, PropTypes } from 'react';
 import Paper from 'material-ui/Paper';
 import { List, ListItem } from 'material-ui/List';
 import './ListMessages.css';
-import _ from "lodash";
 import {Card, CardMedia, CardTitle} from 'material-ui/Card';
-import FlatButton from 'material-ui/FlatButton';
 
 const CardExampleWithAvatar = ({data}) => {
   return (  <Card>
     <CardMedia overlay={<CardTitle title={data.message.from.username} subtitle={data.message.from.first_name} />} >
-      <img src={"https://api.telegram.org/file/bot173322972:AAEOo2XWSglN11-SvXyCu9Wh6R9exxZlQkU/"+data.photoImg.file_path} />
+      <img src={'https://api.telegram.org/file/bot173322972:AAEOo2XWSglN11-SvXyCu9Wh6R9exxZlQkU/'+data.photoImg.file_path.toString()} />
     </CardMedia>
   </Card>)
 }
@@ -19,7 +17,7 @@ const StickerMsg = ({data}) => {
 
   return (  <Card>
     <CardMedia overlay={<CardTitle title={data.message.from.username} subtitle={data.message.from.first_name} />} >
-      <img src={"https://api.telegram.org/file/bot173322972:AAEOo2XWSglN11-SvXyCu9Wh6R9exxZlQkU/"+data.sticker.file_path} />
+      <img src={'https://api.telegram.org/file/bot173322972:AAEOo2XWSglN11-SvXyCu9Wh6R9exxZlQkU/'+data.sticker.file_path.toString()} />
     </CardMedia>
   </Card>)
 }
@@ -37,7 +35,7 @@ class ListMessages extends Component {
           }
 
           if (result.sticker) {
-            console.log(result)
+            //console.log(result)
             return (
                 <StickerMsg key={index} data={result}/>
               )
