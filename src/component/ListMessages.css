@@ -1,0 +1,19 @@
+.List {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.ListItem {
+	flex: 1;
+	font-size: 24px !important;
+}
+
+.Paper {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20%;
+    margin-right: 20%;
+}
